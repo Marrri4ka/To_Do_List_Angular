@@ -19,7 +19,7 @@ tasks: Task[] = [
   new Task('Dinner',2),
   new Task('Cleaning',2)
 ];
-  selectedTask: Task = this.tasks[0];
+  selectedTask = null;
   editTask(clickedTask) {
     this.selectedTask = clickedTask;
   }
@@ -33,4 +33,7 @@ tasks: Task[] = [
     return "bg-info";
   }
 }
+finishedEditing() {
+   this.selectedTask = null;
+ }
 }
